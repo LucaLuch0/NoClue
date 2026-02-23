@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 553807e054caee649b0c777a61f762d3, type: 3}
   m_Name: Reverend Green
   m_EditorClassIdentifier: 
-  cardName: 
+  cardName: Reverend Green
   cardType: 0
