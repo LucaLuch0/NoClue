@@ -3375,6 +3375,85 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1180156125}
   m_CullTransparentMesh: 1
+--- !u!1 &1230204753
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1230204754}
+  - component: {fileID: 1230204755}
+  m_Layer: 5
+  m_Name: CardManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1230204754
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1230204753}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2135336663}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1230204755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1230204753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84297f6f488800046b901c6486f60909, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allCardsDeck:
+  - {fileID: 11400000, guid: 307e16a856822f047a50cbe0e2068054, type: 2}
+  - {fileID: 11400000, guid: 12294bba6aefa5f44a4e795c315bbd2d, type: 2}
+  - {fileID: 11400000, guid: adc46c7a2994f514fa7effa1eaca8847, type: 2}
+  - {fileID: 11400000, guid: 998f7d9d564abd24f8aee1684e573b80, type: 2}
+  - {fileID: 11400000, guid: 5f6487d81a2aeae49ad9e919d732a9e3, type: 2}
+  - {fileID: 11400000, guid: ce2cf575318363d409d8a98c22589c42, type: 2}
+  - {fileID: 11400000, guid: 0a8a80173112d3f4483b92cf5fc80704, type: 2}
+  - {fileID: 11400000, guid: bf317c3b926dbc441a400e92b6d19f29, type: 2}
+  - {fileID: 11400000, guid: c5dc1e25bfbbd7c44b49777c1385be29, type: 2}
+  - {fileID: 11400000, guid: 05a34f3936b15a64a95c93d74f3bad59, type: 2}
+  - {fileID: 11400000, guid: 58af26c4b25004b4c8024a96c591451b, type: 2}
+  - {fileID: 11400000, guid: 98cb97de7c0d1f64086dda0fd74ce2f7, type: 2}
+  - {fileID: 11400000, guid: 06bd13eedf04c0540a04e3d0c3f444d0, type: 2}
+  - {fileID: 11400000, guid: 0227ad9866e2fba43857236b0352aa9f, type: 2}
+  - {fileID: 11400000, guid: 2877665b0d9a1704182a7c14ba69dbaf, type: 2}
+  - {fileID: 11400000, guid: f286aa5f195a3b9459cbd705bb74d248, type: 2}
+  - {fileID: 11400000, guid: 25544351d8ea9f149929c343128699fe, type: 2}
+  - {fileID: 11400000, guid: 497f2b2e06356e642a1b9ca4345d31b7, type: 2}
+  - {fileID: 11400000, guid: b46599738e9876d469cd4115fcebe732, type: 2}
+  - {fileID: 11400000, guid: f0f9123ee6da8c14daf4e184a7919596, type: 2}
+  players:
+  - playerName: Bob
+    hand: []
+  - playerName: Bob 2
+    hand: []
+  - playerName: Bob 3
+    hand: []
+  murderRoom: {fileID: 0}
+  murderSuspect: {fileID: 0}
+  murderWeapon: {fileID: 0}
 --- !u!1 &1239149605
 GameObject:
   m_ObjectHideFlags: 0
@@ -4770,6 +4849,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1180156126}
+  - {fileID: 1230204754}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
