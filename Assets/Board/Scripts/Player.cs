@@ -4,6 +4,7 @@ public class Player : MonoBehaviour
 {
     
     // VARIABLES
+    //
     
     // the tile the player is assigned to (the parent gameobject)
     private BoardSpace position;
