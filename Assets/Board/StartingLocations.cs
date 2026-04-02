@@ -5,8 +5,9 @@ public class StartingLocations : MonoBehaviour
 {
     private Dictionary<Player, Character> playerCharacters;
     
-    private Dictionary<Character, BoardSpace> characterStartingLocations;
-    public StartingLocations(Dictionary<Player, Character> playerCharacters, Dictionary<Character, BoardSpace> characterStartingLocations)
+    private Dictionary<Character, Tile> characterStartingLocations;
+    
+    public StartingLocations(Dictionary<Player, Character> playerCharacters, Dictionary<Character, Tile> characterStartingLocations;)
     {
         this.playerCharacters = playerCharacters;
         this.characterStartingLocations = characterStartingLocations;
@@ -20,8 +21,8 @@ public class StartingLocations : MonoBehaviour
 
         foreach (var item in playerCharacters)
         {
-            //item.Key.gameObject.transform.SetParent(characterStartingLocations[item.Value].getGameObject().transform);
-            //item.Key.gameObject.transform.position = characterStartingLocations[item.Value].getGameObject().transform.position;
+            item.Key.gameObject.transform.SetParent(characterStartingLocations[item.Value].getGameObject().transform);
+            item.Key.gameObject.transform.position = characterStartingLocations[item.Value].getGameObject().transform.position;
 
         }
     }

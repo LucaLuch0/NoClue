@@ -13,7 +13,6 @@ public class MapGenerator : MonoBehaviour
     [Header("Base Tiles")]
     public Tilemap visualTilemap;
     public TileBase hallwayBase;
-    public float tileWidth;
     
     [Header("Room Interior & Outlines")]
     public TileBase roomCenter; 
@@ -44,15 +43,9 @@ public class MapGenerator : MonoBehaviour
     public enum DoorDirection { Top, Bottom, Left, Right }
     private Dictionary<Vector2Int, DoorDirection> doorRegistry = new Dictionary<Vector2Int, DoorDirection>();
     private List<RectInt> allRooms = new List<RectInt>();
-    private List<Room> rooms = new List<Room>();
-    
-    private List<RoomSpace> roomSpaces = new List<RoomSpace>();
-    private List<HallwaySpace> hallwaySpaces = new List<HallwaySpace>();
 
     void Start()
     {
-        tileWidth = visualTilemap.cellSize.x;
-        
         // Define Rooms
         allRooms.Add(new RectInt(0, 0, 6, 6));   // Kitchen
         allRooms.Add(new RectInt(8, 0, 8, 7));   // Ballroom
@@ -64,17 +57,6 @@ public class MapGenerator : MonoBehaviour
         allRooms.Add(new RectInt(0, 19, 7, 6));  // Lounge
         allRooms.Add(new RectInt(9, 18, 6, 7));  // Hall
         allRooms.Add(new RectInt(17, 21, 7, 4)); // Study
-        
-        rooms.Add(new Room("KITCHEN"));
-        rooms.Add(new Room("BALLROOM"));
-        rooms.Add(new Room("CONSERVATORY"));
-        rooms.Add(new Room("DINING ROOM"));
-        rooms.Add(new Room("CELLAR"));
-        rooms.Add(new Room("BILLIARD"));
-        rooms.Add(new Room("LIBRARY"));
-        rooms.Add(new Room("LOUNGE"));
-        rooms.Add(new Room("HALL"));
-        rooms.Add(new Room("STUDY"));
         
         // Define Doors
 
@@ -142,15 +124,6 @@ public class MapGenerator : MonoBehaviour
         LabelRooms();
     }
 
-    // CAN BE DELETED
-    void DebugRooms()
-    {
-        foreach (Room room in rooms)
-        {
-            room.debug();
-        }
-    }
-
     void GenerateCluedoBoard()
     {
         for (int x = 0; x < width; x++)
@@ -185,11 +158,9 @@ public class MapGenerator : MonoBehaviour
 
     void CreateHallway(Vector2Int pos)
     {
-        bool isDoor = false;
         TileBase selectedTile = hallwayBase;
         if (doorRegistry.ContainsKey(pos))
         {
-            isDoor = true;
             switch (doorRegistry[pos])
             {
                 case DoorDirection.Top: selectedTile = hallwayDoorTop; break;
@@ -199,7 +170,6 @@ public class MapGenerator : MonoBehaviour
             }
         }
         visualTilemap.SetTile((Vector3Int)pos, selectedTile);
-        hallwaySpaces.Add(new HallwaySpace(pos, visualTilemap.CellToWorld((Vector3Int) pos), isDoor));
     }
 
     void CreateRoom(Vector2Int pos, RectInt rect)
@@ -216,16 +186,6 @@ public class MapGenerator : MonoBehaviour
                 case DoorDirection.Left: selectedTile = roomDoorLeft; break;
                 case DoorDirection.Right: selectedTile = roomDoorRight; break;
             }
-            
-            // Adds the Tilemap & World Position of the Tile to the Room Class
-            Vector2 worldPos = visualTilemap.CellToWorld(new Vector3Int(pos.x, pos.y, 0));
-            string roomName = GetRoomName(rect);
-            Room room = GetRoom(roomName);
-            if (room == null) { return; }
-            RoomSpace roomSpace = (new RoomSpace(pos, worldPos, room, true));
-            roomSpaces.Add(roomSpace);
-            room.addRoomTile(roomSpace);
-            
         }
         else
         {
@@ -240,20 +200,9 @@ public class MapGenerator : MonoBehaviour
             else if (pos.y == rect.yMin) selectedTile = roomWallBottom;
             else if (pos.x == rect.xMin) selectedTile = roomWallLeft;
             else if (pos.x == rect.xMax - 1) selectedTile = roomWallRight;
-            
-            // Adds the World Position of the Tile to the Room Class
-            Vector2 worldPos = visualTilemap.CellToWorld(new Vector3Int(pos.x, pos.y, 0));
-            
-            string roomName = GetRoomName(rect);
-            Room room = GetRoom(roomName);
-            if (room == null) { return; }
-            RoomSpace roomSpace = (new RoomSpace(pos, worldPos, room, false));
-            roomSpaces.Add(roomSpace);
-            room.addRoomTile(roomSpace);
         }
-        
+
         visualTilemap.SetTile((Vector3Int)pos, selectedTile);
-        
     }
 
     void LabelRooms()
@@ -280,55 +229,16 @@ public class MapGenerator : MonoBehaviour
         if (rect.x == 8 && rect.y == 0) return "HALL";
         if (rect.x == 18 && rect.y == 0) return "STUDY";
         if (rect.x == 0 && rect.y == 9) return "DINING ROOM";
-        //if (rect.x == 10 && rect.y == 9) return "NoClue";
+        if (rect.x == 10 && rect.y == 9) return "NoClue";
         if (rect.x == 18 && rect.y == 8) return "LIBRARY";
-        if (rect.x == 17 && rect.y == 14) return "BILLIARD";
+        if (rect.x == 17 && rect.y == 14) return "BILLIARD ROOM";
         if (rect.x == 0 && rect.y == 19) return "KITCHEN";
         if (rect.x == 9 && rect.y == 18) return "BALLROOM";
         if (rect.x == 17 && rect.y == 21) return "CONSERVATORY";
         return "";
     }
-
-    public Room GetRoom(string name)
-    {
-        foreach (Room room in rooms)
-        {
-            if (room.name == name)
-            {
-                return room;
-            }
-        }
-        Debug.LogError("Room Not Found!");
-        return null;
-    }
 }
 
-public abstract class BoardSpace { 
-    public Vector2Int pos;
-    public Vector2 worldPos;
-    public BoardSpace(Vector2Int pos, Vector2 worldPos)
-    {
-        this.pos = pos;
-        this.worldPos = worldPos;
-    }
-}
-
-public class HallwaySpace : BoardSpace
-{
-    public bool isDoorway;
-    public HallwaySpace(Vector2Int pos, Vector2 worldPos, bool isDoorway) : base(pos, worldPos)
-    {
-        this.isDoorway = isDoorway;
-    }
-}
-
-public class RoomSpace : BoardSpace
-{
-    public Room room; 
-    public bool isDoorway;
-    public RoomSpace(Vector2Int pos, Vector2 worldPos, Room room, bool isDoorway) : base(pos, worldPos)
-    {
-        this.room = room;
-        this.isDoorway = isDoorway;
-    }
-}
+public abstract class BoardSpace { public Vector2Int pos; }
+public class Hallway : BoardSpace { public bool isDoorway; }
+public class Room : BoardSpace { public string roomName; }
