@@ -4,7 +4,18 @@ public class Player : MonoBehaviour
 {
     
     // VARIABLES
+    private string name;
+    private string character;
     
+    // CONSTRUCTOR
+    public Player(string name, string character)
+    {
+        this.name = name;
+        this.character = character;
+        
+        Debug.Log("Player Created: Name = " + name + " Character = " + character + "");
+    }
+
     // the tile the player is assigned to (the parent gameobject)
     private BoardSpace position;
 
@@ -14,7 +25,11 @@ public class Player : MonoBehaviour
         this.position = tile;
     }
     
-    // BASIC GETTERS
+    // GETTERS
+    public string getName()
+    {
+        return name;
+    }
     public BoardSpace getPosition()
     {
         return position;
