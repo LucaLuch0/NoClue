@@ -12,14 +12,14 @@ public class StartSceneManager : MonoBehaviour
     public GameObject inputGrid;
     public GameObject inputPrefab;
     private int playerCount;
-    
+
     // stack allows us to remove the last player added
     private Stack<GameObject> playerInputs;
 
     public void addPlayer()
     {
-        if(playerCount == 6) { return; } // max players (6)
-        
+        if (playerCount == 6) { return; } // max players (6)
+
         // creats a new player input object
         GameObject newPlayerInput = Instantiate(inputPrefab, inputGrid.transform);
         newPlayerInput.name = "Player " + (playerCount + 1) + "'s Name...";
@@ -29,8 +29,8 @@ public class StartSceneManager : MonoBehaviour
 
     public void removePlayer()
     {
-        if(playerCount == 0) { return; } // no players (0)
-        
+        if (playerCount == 0) { return; } // no players (0)
+
         Destroy(playerInputs.Pop());
         playerCount--;
     }
@@ -38,22 +38,22 @@ public class StartSceneManager : MonoBehaviour
     private List<String> getPlayerNames()
     {
         List<String> playerNames = new List<String>();
-        
+
         Debug.Log("Player Count: " + playerInputs.Count);
-        foreach(GameObject playerInput in playerInputs)
+        foreach (GameObject playerInput in playerInputs)
         {
             playerNames.Add(playerInput.GetComponent<TMP_InputField>().text);
         }
-        
+
         return playerNames;
     }
 
     public void startGame()
-    { 
+    {
         List<Player> players = new List<Player>();
-    
+
         List<String> characterNames = new List<String>();
-        
+
         //PLACEHOLDER FOR CHARACTER NAMES
         characterNames.Add("1");
         characterNames.Add("2");
@@ -61,34 +61,37 @@ public class StartSceneManager : MonoBehaviour
         characterNames.Add("4");
         characterNames.Add("5");
         characterNames.Add("6");
-        
+
         players = new List<Player>();
-        
-        foreach(String name in getPlayerNames())
+
+        foreach (String name in getPlayerNames())
         {
             int random = Random.Range(0, characterNames.Count);
             string character = characterNames[random];
             characterNames.RemoveAt(random);
-            
-            players.Add(new Player(name, character));
+
+            GameObject playerObj = new GameObject(name);
+            Player newPlayer = playerObj.AddComponent<Player>();
+            newPlayer.Initialize(name, character);
+            players.Add(newPlayer);
         }
-        
+
         PlayerManager.addPlayers(players);
     }
-    
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         playerInputs = new Stack<GameObject>();
-        playerCount = 0;   
+        playerCount = 0;
         addPlayer();
-        
-        
+
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

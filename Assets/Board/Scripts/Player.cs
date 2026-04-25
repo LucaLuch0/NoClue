@@ -1,18 +1,20 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class Player : MonoBehaviour
 {
-    
     // VARIABLES
-    private string name;
+    private string playerName;
     private string character;
-    
+
+    public List<Card> hand = new List<Card>();
+
     // CONSTRUCTOR
-    public Player(string name, string character)
+    public void Initialize(string name, string character)
     {
-        this.name = name;
+        this.playerName = name;
         this.character = character;
-        
+
         Debug.Log("Player Created: Name = " + name + " Character = " + character + "");
     }
 
@@ -24,11 +26,11 @@ public class Player : MonoBehaviour
     {
         this.position = tile;
     }
-    
+
     // GETTERS
     public string getName()
     {
-        return name;
+        return playerName;
     }
     public BoardSpace getPosition()
     {
@@ -38,7 +40,4 @@ public class Player : MonoBehaviour
     {
         return this.gameObject;
     }
-
-    
 }
-

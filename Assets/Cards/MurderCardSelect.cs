@@ -75,10 +75,3 @@ public class MurderCardSelect : MonoBehaviour
     }
 
 }
-
-[System.Serializable]
-public class Player
-{
-    public string playerName;
-    public List<Card> hand = new List<Card>();
-}
