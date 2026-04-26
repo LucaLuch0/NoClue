@@ -4,10 +4,11 @@ using System.Collections.Generic;
 public class Player : MonoBehaviour
 {
     // VARIABLES
-    private string playerName;
-    private string character;
+    [SerializeField] private string playerName;
+    [SerializeField] private string character;
 
     public List<Card> hand = new List<Card>();
+    [HideInInspector] public string personalNotesLog = "My Ruled Out Notes:\n";
 
     // CONSTRUCTOR
     public void Initialize(string name, string character)
@@ -32,6 +33,12 @@ public class Player : MonoBehaviour
     {
         return playerName;
     }
+
+    public string getCharacter()
+    {
+        return character;
+    }
+
     public BoardSpace getPosition()
     {
         return position;

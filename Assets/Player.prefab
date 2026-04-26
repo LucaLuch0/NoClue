@@ -100,3 +100,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98a0ff448cb574345921950aee0828d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerName: B
+  character: Miss Scarlett
+  hand: []
+  personalNotesLog: 'My Ruled Out Notes:
+
+'
