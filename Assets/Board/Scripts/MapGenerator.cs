@@ -47,10 +47,42 @@ public class MapGenerator : MonoBehaviour
     private List<Room> rooms = new List<Room>();
     
     public List<StartingSpace> startingSpaces = new List<StartingSpace>();
-    private List<RoomSpace> roomSpaces = new List<RoomSpace>();
-    private List<HallwaySpace> hallwaySpaces = new List<HallwaySpace>();
+    public List<RoomSpace> roomSpaces = new List<RoomSpace>();
+    public List<HallwaySpace> hallwaySpaces = new List<HallwaySpace>();
+
+    public BoardSpace getBoardSpace(Vector2Int cellPos)
+    {
+        foreach (RoomSpace roomSpace in roomSpaces)
+        {
+            if (roomSpace.pos == cellPos)
+            {
+                return roomSpace;
+            }
+        }
+
+        foreach (HallwaySpace hallwaySpace in hallwaySpaces)
+        {
+            if (hallwaySpace.pos == cellPos)
+            {
+                return hallwaySpace;
+            }
+        }
+
+        return null;
+    }
     
     public GameManager gameManager;
+
+    public List<Vector2Int> getDoors()
+    {
+        List<Vector2Int> doors = new List<Vector2Int>();
+        foreach (Vector2Int pos in doorRegistry.Keys)
+        {
+            doors.Add(pos);
+        }
+
+        return doors;
+    }
 
     void Start()
     {

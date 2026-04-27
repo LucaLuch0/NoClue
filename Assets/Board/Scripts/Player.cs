@@ -12,10 +12,7 @@ public class Player : MonoBehaviour
     public GameObject gameObject;
 
     private float adjustment = 0.5f;
-    
-    
-    
-    
+    public int moves = 5;
     
     // CONSTRUCTOR
     public void Initialize(string name, string character)
@@ -37,6 +34,81 @@ public class Player : MonoBehaviour
         gameObject.transform.position = newVector;
     }
 
+    public void movePlayer(BoardSpace tile)
+    {
+        //if (moves == 0)
+        //{
+            //Debug.Log("No moves left");
+            //return;
+        //}
+        if (!isTileNextToPlayer(tile))
+        {
+            Debug.Log("Tile not next to the player");
+            return;
+        }
+
+        if (!isValidMove(tile))
+        {
+            Debug.Log("Invalid move");
+            return;
+        }
+
+        if (isDoor(tile))
+        {
+            foreach (RoomSpace roomSpace in PlayerManager.mapGenerator.roomSpaces)
+            {
+                if (roomSpace.pos == tile.pos)
+                {
+                    roomSpace.room.addPlayer(this, adjustment);
+                    position = roomSpace;
+                    Debug.Log("Is Door");
+                    break;
+                }
+            }
+        }
+        else
+        {
+            setPosition(tile);
+
+        }
+        Debug.Log("Player Moved");
+        moves--;
+        
+    }
+
+    public bool isDoor(BoardSpace tile)
+    {
+        foreach (Vector2Int pos in PlayerManager.mapGenerator.getDoors())
+        {
+            if (tile.pos == pos)
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    public bool isValidMove(BoardSpace tile)
+    {
+        foreach (HallwaySpace hallwaySpace in PlayerManager.mapGenerator.hallwaySpaces)
+        {
+            if (hallwaySpace.Equals(tile))
+            {
+                return true;
+            }
+        }
+
+        foreach (Vector2Int pos in PlayerManager.mapGenerator.getDoors())
+        {
+            if (tile.pos == pos)
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
     // GETTERS
     public string getName()
     {
@@ -46,6 +118,16 @@ public class Player : MonoBehaviour
     public string getCharacter()
     {
         return character;
+    }
+
+    public bool isTileNextToPlayer(BoardSpace tile)
+    {
+        if (tile.pos.x == position.pos.x + 1 ^ tile.pos.x == position.pos.x - 1 ^ tile.pos.y == position.pos.y - 1 ^ tile.pos.y == position.pos.y + 1)
+        {
+            return true;
+        }
+
+        return false;
     }
 
     public BoardSpace getPosition()
