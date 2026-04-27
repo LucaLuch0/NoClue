@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
@@ -43,12 +44,15 @@ public class MapGenerator : MonoBehaviour
 
     public enum DoorDirection { Top, Bottom, Left, Right }
     private Dictionary<Vector2Int, DoorDirection> doorRegistry = new Dictionary<Vector2Int, DoorDirection>();
+    public List<Door> doors = new List<Door>();
     private List<RectInt> allRooms = new List<RectInt>();
     private List<Room> rooms = new List<Room>();
     
     public List<StartingSpace> startingSpaces = new List<StartingSpace>();
     public List<RoomSpace> roomSpaces = new List<RoomSpace>();
     public List<HallwaySpace> hallwaySpaces = new List<HallwaySpace>();
+    public List<DoorSpace> doorSpaces = new List<DoorSpace>();
+    public List<ExitSpace> exitSpaces = new List<ExitSpace>();
 
     public BoardSpace getBoardSpace(Vector2Int cellPos)
     {
@@ -131,63 +135,63 @@ public class MapGenerator : MonoBehaviour
         
         // Define Doors
         // Lounge
-        RegisterDoor(4, 5, DoorDirection.Top); 
-        RegisterDoor(4, 6, DoorDirection.Bottom); 
+        RegisterDoor(4, 5, DoorDirection.Top, false, "LOUNGE"); 
+        RegisterDoor(4, 6, DoorDirection.Bottom, true, "LOUNGE"); 
 
         // Dining Room
-        RegisterDoor(6, 8, DoorDirection.Top);
-        RegisterDoor(6, 9, DoorDirection.Bottom);
+        RegisterDoor(6, 8, DoorDirection.Top, true, "DINING ROOM");
+        RegisterDoor(6, 9, DoorDirection.Bottom, false, "DINING ROOM");
 
-        RegisterDoor(7, 12, DoorDirection.Right);
-        RegisterDoor(8, 12, DoorDirection.Left);
+        RegisterDoor(7, 12, DoorDirection.Right, false, "DINING ROOM");
+        RegisterDoor(8, 12, DoorDirection.Left, true,  "DINING ROOM");
         
         // Library
-        RegisterDoor(17, 10, DoorDirection.Right);
-        RegisterDoor(18, 10, DoorDirection.Left);
+        RegisterDoor(17, 10, DoorDirection.Right, true, "LIBRARY");
+        RegisterDoor(18, 10, DoorDirection.Left, false, "LIBRARY");
 
-        RegisterDoor(20, 12, DoorDirection.Top);
-        RegisterDoor(20, 13, DoorDirection.Bottom);
+        RegisterDoor(20, 12, DoorDirection.Top, false, "LIBRARY");
+        RegisterDoor(20, 13, DoorDirection.Bottom, true, "LIBRARY");
 
         // Ball Room
-        RegisterDoor(13, 17, DoorDirection.Top);
-        RegisterDoor(13, 18, DoorDirection.Bottom);
+        RegisterDoor(13, 17, DoorDirection.Top,  true, "BALLROOM");
+        RegisterDoor(13, 18, DoorDirection.Bottom, false,  "BALLROOM");
 
-        RegisterDoor(14, 20, DoorDirection.Right);
-        RegisterDoor(15, 20, DoorDirection.Left);
+        RegisterDoor(14, 20, DoorDirection.Right, false, "BALLROOM");
+        RegisterDoor(15, 20, DoorDirection.Left, true,  "BALLROOM");
 
-        RegisterDoor(10, 17, DoorDirection.Top);
-        RegisterDoor(10, 18, DoorDirection.Bottom);
+        RegisterDoor(10, 17, DoorDirection.Top, true, "BALLROOM");
+        RegisterDoor(10, 18, DoorDirection.Bottom, false, "BALLROOM");
 
-        RegisterDoor(8, 20, DoorDirection.Right);
-        RegisterDoor(9, 20, DoorDirection.Left);
+        RegisterDoor(8, 20, DoorDirection.Right, true,  "BALLROOM");
+        RegisterDoor(9, 20, DoorDirection.Left, false, "BALLROOM");
 
         // Kitchen
-        RegisterDoor(5, 19, DoorDirection.Bottom);
-        RegisterDoor(5, 18, DoorDirection.Top);
+        RegisterDoor(5, 19, DoorDirection.Bottom, false, "KITCHEN");
+        RegisterDoor(5, 18, DoorDirection.Top, true, "KITCHEN");
 
         // Conservatory
-        RegisterDoor(18, 20, DoorDirection.Top);
-        RegisterDoor(18, 21, DoorDirection.Bottom);
+        RegisterDoor(18, 20, DoorDirection.Top, true, "CONSERVATORY");
+        RegisterDoor(18, 21, DoorDirection.Bottom, false, "CONSERVATORY");
 
         // Billiard Room
-        RegisterDoor(16, 17, DoorDirection.Right);
-        RegisterDoor(17, 17, DoorDirection.Left);
+        RegisterDoor(16, 17, DoorDirection.Right, true, "BILLIARD");
+        RegisterDoor(17, 17, DoorDirection.Left, false,  "BILLIARD");
 
-        RegisterDoor(22, 13, DoorDirection.Top);
-        RegisterDoor(22, 14, DoorDirection.Bottom);
+        RegisterDoor(22, 13, DoorDirection.Top, true, "BILLIARD");
+        RegisterDoor(22, 14, DoorDirection.Bottom, false, "BILLIARD");
 
         // Hall
-        RegisterDoor(11, 6, DoorDirection.Top);
-        RegisterDoor(11, 7, DoorDirection.Bottom);
-        RegisterDoor(12, 6, DoorDirection.Top);
-        RegisterDoor(12, 7, DoorDirection.Bottom);
+        RegisterDoor(11, 6, DoorDirection.Top, false, "HALL");
+        RegisterDoor(11, 7, DoorDirection.Bottom, true, "HALL");
+        RegisterDoor(12, 6, DoorDirection.Top, false, "HALL");
+        RegisterDoor(12, 7, DoorDirection.Bottom, true, "HALL");
 
-        RegisterDoor(15, 3, DoorDirection.Right);
-        RegisterDoor(16, 3, DoorDirection.Left);
+        RegisterDoor(15, 3, DoorDirection.Right,  false, "HALL");
+        RegisterDoor(16, 3, DoorDirection.Left, true, "HALL");
 
         // Study
-        RegisterDoor(19, 4, DoorDirection.Top);
-        RegisterDoor(19, 5, DoorDirection.Bottom);
+        RegisterDoor(19, 4, DoorDirection.Top, false, "STUDY");
+        RegisterDoor(19, 5, DoorDirection.Bottom, true, "STUDY");
 
         
         GenerateCluedoBoard();
@@ -232,9 +236,19 @@ public class MapGenerator : MonoBehaviour
         Debug.Log("Board Generation Finished!");
     }
 
-    void RegisterDoor(int x, int y, DoorDirection dir)
+    void RegisterDoor(int x, int y, DoorDirection dir, bool isExit, String room)
     {
         doorRegistry[new Vector2Int(x, y)] = dir;
+        if (isExit)
+        {
+            ExitSpace exitSpace = new ExitSpace(new Vector2Int(x, y), visualTilemap.CellToWorld(new Vector3Int(x, y)), GetRoom(room));
+            exitSpaces.Add(exitSpace);
+        }
+        else
+        {
+            DoorSpace doorSpace = new DoorSpace(new Vector2Int(x, y),visualTilemap.CellToWorld(new Vector3Int(x, y)), GetRoom(room));
+            doorSpaces.Add(doorSpace);
+        }
     }
 
     void CreateHallway(Vector2Int pos)
@@ -379,12 +393,46 @@ public class StartingSpace : BoardSpace
     }
 }
 
+public class Door
+{
+    public DoorSpace doorSpace;
+    public ExitSpace exitSpace;
+
+    public Door(DoorSpace doorSpace, ExitSpace exitSpace)
+    {
+        this.doorSpace = doorSpace;
+        this.exitSpace = exitSpace;
+    }
+}
+
 public class HallwaySpace : BoardSpace
 {
     public bool isDoorway;
     public HallwaySpace(Vector2Int pos, Vector2 worldPos, bool isDoorway) : base(pos, worldPos)
     {
         this.isDoorway = isDoorway;
+    }
+}
+
+public class DoorSpace : BoardSpace
+{
+    public Room room;
+    public DoorSpace(Vector2Int pos, Vector2 worldPos, Room room) : base(pos, worldPos)
+    {
+        this.pos = pos;
+        this.worldPos = worldPos;
+        this.room = room;
+    }
+}
+
+public class ExitSpace : BoardSpace
+{
+    public Room room;
+    public ExitSpace(Vector2Int pos, Vector2 worldPos, Room room) : base(pos, worldPos)
+    {
+        this.pos = pos;
+        this.worldPos = worldPos;
+        this.room = room;
     }
 }
 

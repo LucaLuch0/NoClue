@@ -91,7 +91,7 @@ public class Room
     }
     
     // Removes player from Tile and Room, and reassigns to an exit
-    public void removePlayer(Player player, Vector2 exit)
+    public void removePlayer(Player player)
     {
         players.Remove(player);
         
@@ -104,9 +104,6 @@ public class Room
                 break;
             }
         }
-
-        player.getGameObject().transform.position = exit;
-
     }
     
 

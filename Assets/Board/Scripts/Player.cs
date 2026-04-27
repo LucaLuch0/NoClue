@@ -12,7 +12,7 @@ public class Player : MonoBehaviour
     public GameObject gameObject;
 
     private float adjustment = 0.5f;
-    public int moves = 5;
+    public int moves;
     
     // CONSTRUCTOR
     public void Initialize(string name, string character)
@@ -20,6 +20,7 @@ public class Player : MonoBehaviour
         this.playerName = name;
         this.character = character;
 
+        moves = 100;
         Debug.Log("Player Created: Name = " + name + " Character = " + character + "");
     }
 
@@ -36,11 +37,32 @@ public class Player : MonoBehaviour
 
     public void movePlayer(BoardSpace tile)
     {
-        //if (moves == 0)
-        //{
-            //Debug.Log("No moves left");
-            //return;
-        //}
+        
+        
+        
+        if (moves <= 0)
+        {
+            return;
+        }
+        
+        // checks if player is in room and allows move if it is a valid exit to a room
+        if (position is RoomSpace)
+        {
+            foreach (ExitSpace exitSpace in PlayerManager.mapGenerator.exitSpaces)
+            {
+                if (exitSpace.room.Equals(((RoomSpace) position).room))
+                {
+                    if (tile.pos == exitSpace.pos)
+                    {
+                        exitSpace.room.removePlayer(this);
+                        setPosition(tile);
+                        moves--;
+                        return;
+                    }
+                }
+            }
+        }
+        
         if (!isTileNextToPlayer(tile))
         {
             Debug.Log("Tile not next to the player");
@@ -78,9 +100,9 @@ public class Player : MonoBehaviour
 
     public bool isDoor(BoardSpace tile)
     {
-        foreach (Vector2Int pos in PlayerManager.mapGenerator.getDoors())
+        foreach (DoorSpace door in PlayerManager.mapGenerator.doorSpaces)
         {
-            if (tile.pos == pos)
+            if (tile.pos == door.pos)
             {
                 return true;
             }
@@ -107,6 +129,14 @@ public class Player : MonoBehaviour
             }
         }
 
+        foreach (ExitSpace exitSpace in PlayerManager.mapGenerator.exitSpaces)
+        {
+            if (exitSpace.Equals(tile))
+            {
+                return true;
+            }
+        }
+
         return false;
     }
     // GETTERS
@@ -122,11 +152,23 @@ public class Player : MonoBehaviour
 
     public bool isTileNextToPlayer(BoardSpace tile)
     {
-        if (tile.pos.x == position.pos.x + 1 ^ tile.pos.x == position.pos.x - 1 ^ tile.pos.y == position.pos.y - 1 ^ tile.pos.y == position.pos.y + 1)
+        if (tile.pos.x == position.pos.x + 1 && tile.pos.y == position.pos.y)
         {
             return true;
         }
-
+        if (tile.pos.x == position.pos.x - 1 && tile.pos.y == position.pos.y)
+        {
+            return true;
+        }
+        if (tile.pos.x == position.pos.x && tile.pos.y == position.pos.y + 1)
+        {
+            return true;
+        }
+        if (tile.pos.x == position.pos.x && tile.pos.y == position.pos.y - 1)
+        {
+            return true;
+        }
+        
         return false;
     }
 
