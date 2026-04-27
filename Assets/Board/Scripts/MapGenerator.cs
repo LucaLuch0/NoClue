@@ -46,11 +46,16 @@ public class MapGenerator : MonoBehaviour
     private List<RectInt> allRooms = new List<RectInt>();
     private List<Room> rooms = new List<Room>();
     
+    public List<StartingSpace> startingSpaces = new List<StartingSpace>();
     private List<RoomSpace> roomSpaces = new List<RoomSpace>();
     private List<HallwaySpace> hallwaySpaces = new List<HallwaySpace>();
+    
+    public GameManager gameManager;
 
     void Start()
     {
+        PlayerManager.mapGenerator = this;
+        
         tileWidth = visualTilemap.cellSize.x;
         
         // Define Rooms
@@ -76,8 +81,23 @@ public class MapGenerator : MonoBehaviour
         rooms.Add(new Room("HALL"));
         rooms.Add(new Room("STUDY"));
         
-        // Define Doors
+        
+        // Starting Locations
+        Vector2Int startingSpace1 = new  Vector2Int(6, 0);
+        Vector2Int startingSpace2 = new  Vector2Int(16, 0);
+        Vector2Int startingSpace3 = new  Vector2Int(7, 24);        
+        Vector2Int startingSpace4 = new  Vector2Int(15, 24);
+        Vector2Int startingSpace5 = new  Vector2Int(0, 7); 
+        Vector2Int startingSpace6 = new  Vector2Int(23, 6);
 
+        startingSpaces.Add(new StartingSpace(startingSpace1, visualTilemap.CellToWorld((Vector3Int) startingSpace1)));
+        startingSpaces.Add(new StartingSpace(startingSpace2, visualTilemap.CellToWorld((Vector3Int) startingSpace2)));
+        startingSpaces.Add(new StartingSpace(startingSpace3, visualTilemap.CellToWorld((Vector3Int) startingSpace3)));
+        startingSpaces.Add(new StartingSpace(startingSpace4, visualTilemap.CellToWorld((Vector3Int) startingSpace4)));
+        startingSpaces.Add(new StartingSpace(startingSpace5, visualTilemap.CellToWorld((Vector3Int) startingSpace5)));
+        startingSpaces.Add(new StartingSpace(startingSpace6, visualTilemap.CellToWorld((Vector3Int) startingSpace6)));
+        
+        // Define Doors
         // Lounge
         RegisterDoor(4, 5, DoorDirection.Top); 
         RegisterDoor(4, 6, DoorDirection.Bottom); 
@@ -140,6 +160,8 @@ public class MapGenerator : MonoBehaviour
         
         GenerateCluedoBoard();
         LabelRooms();
+        
+        gameManager.setup();
     }
 
     // CAN BE DELETED
@@ -304,9 +326,21 @@ public class MapGenerator : MonoBehaviour
 }
 
 public abstract class BoardSpace { 
+    
     public Vector2Int pos;
     public Vector2 worldPos;
     public BoardSpace(Vector2Int pos, Vector2 worldPos)
+    {
+        this.pos = pos;
+        this.worldPos = worldPos;
+    }
+}
+
+public class StartingSpace : BoardSpace
+{
+    public Vector2Int pos;
+    public Vector2 worldPos;
+    public StartingSpace(Vector2Int pos, Vector2 worldPos) : base(pos, worldPos)
     {
         this.pos = pos;
         this.worldPos = worldPos;

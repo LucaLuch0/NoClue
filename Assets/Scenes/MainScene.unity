@@ -451,6 +451,7 @@ MonoBehaviour:
   roomDoorLeft: {fileID: 11400000, guid: 659b7853aeb76874c9590f5478c6030e, type: 2}
   roomDoorRight: {fileID: 11400000, guid: 80738640fe26371449e1e92a756d80b1, type: 2}
   roomLabelPrefab: {fileID: 5178963436363783524, guid: 63a9115c0b57d054299ef7f442cfedab, type: 3}
+  gameManager: {fileID: 1059468425}
 --- !u!4 &858151791
 Transform:
   m_ObjectHideFlags: 0
@@ -495,9 +496,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfe5f893eb5d44a2face0bc3b42fa299, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPrefab: {fileID: 613035537609512815, guid: ea6af7fa8e75f46c2b7deb8dfde2cd40, type: 3}
   mapGenerator: {fileID: 858151790}
-  test: 0
+  playerPrefab: {fileID: 613035537609512815, guid: ea6af7fa8e75f46c2b7deb8dfde2cd40, type: 3}
 --- !u!4 &1059468426
 Transform:
   m_ObjectHideFlags: 0

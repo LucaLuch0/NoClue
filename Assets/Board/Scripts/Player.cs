@@ -9,7 +9,14 @@ public class Player : MonoBehaviour
 
     public List<Card> hand = new List<Card>();
     [HideInInspector] public string personalNotesLog = "My Ruled Out Notes:\n";
+    public GameObject gameObject;
 
+    private float adjustment = 0.5f;
+    
+    
+    
+    
+    
     // CONSTRUCTOR
     public void Initialize(string name, string character)
     {
@@ -26,6 +33,8 @@ public class Player : MonoBehaviour
     public void setPosition(BoardSpace tile)
     {
         this.position = tile;
+        Vector2 newVector = new Vector2(tile.worldPos.x + this.adjustment, tile.worldPos.y + adjustment);
+        gameObject.transform.position = newVector;
     }
 
     // GETTERS
