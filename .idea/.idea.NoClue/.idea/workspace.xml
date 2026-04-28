@@ -5,15 +5,56 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2ddc8264-1ba8-443c-8efd-93fbd6b798a9" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.NoClue/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NoClue/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Board/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Board/Scripts/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CurvedHandLayout.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CurvedHandLayout.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TurnManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TurnManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Start Scene/InputField (TMP).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Start Scene/InputField (TMP).prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Start Scene/StartScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Start Scene/StartScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Board/Player.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Board/Player.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Board/Prefabs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Board/Prefabs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Board/Room.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Board/Room.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Board/Scripts.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Board/Scripts.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Board/Sprites.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Board/Sprites.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Board/StartingLocations.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Board/StartingLocations.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CluedoBoard.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CluedoBoard.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HallwayTile.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HallwayTile.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapGenerator.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapGenerator.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RoomTIle.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RoomTIle.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Text (TMP).prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Text (TMP).prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tiles.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tiles.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tiles/hallway_tile0.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tiles/hallway_tile0.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tiles/hallwaybottom_0.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tiles/hallwaybottom_0.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tiles/hallwayleft_0.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tiles/hallwayleft_0.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tiles/hallwayright_0.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tiles/hallwayright_0.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tiles/hallwaytop_0.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tiles/hallwaytop_0.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tiles/room_bottomleftcorner_0.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tiles/room_bottomleftcorner_0.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tiles/room_bottomrightcorner_0.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tiles/room_bottomrightcorner_0.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tiles/room_bottomwall_0.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tiles/room_bottomwall_0.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tiles/room_centre_0.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tiles/room_centre_0.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tiles/room_leftwall_0.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tiles/room_leftwall_0.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tiles/room_rightwall_0.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tiles/room_rightwall_0.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tiles/room_tile0.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tiles/room_tile0.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tiles/room_topleftcorner_0.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tiles/room_topleftcorner_0.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tiles/room_toprightcorner_0.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tiles/room_toprightcorner_0.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tiles/room_topwall_0.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tiles/room_topwall_0.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tiles/roombottom_0.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tiles/roombottom_0.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tiles/roomleft_0.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tiles/roomleft_0.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tiles/roomright_0.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tiles/roomright_0.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tiles/roomtop_0.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tiles/roomtop_0.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/hallwaybottom.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/hallwaybottom.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/hallwayleft.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/hallwayleft.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/hallwayright.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/hallwayright.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/hallwaytop.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/hallwaytop.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/room_bottomleftcorner.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/room_bottomleftcorner.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/room_bottomrightcorner.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/room_bottomrightcorner.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/room_bottomwall.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/room_bottomwall.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/room_centre.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/room_centre.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/room_leftwall.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/room_leftwall.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/room_rightwall.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/room_rightwall.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/room_topleftcorner.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/room_topleftcorner.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/room_toprightcorner.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/room_toprightcorner.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/room_topwall.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/room_topwall.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/roombottom.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/roombottom.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/roomleft.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/roomleft.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/roomright.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/roomright.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/roomtop.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/roomtop.png.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,22 +86,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;board&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;SolutionBuilderGeneralOptionsPage&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "SolutionBuilderGeneralOptionsPage",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="/Applications/Unity/Hub/Editor/6000.0.51f1/Unity.app/Contents/MacOS/Unity" />

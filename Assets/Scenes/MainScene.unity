@@ -1268,7 +1268,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mapGenerator: {fileID: 858151790}
-  playerPrefab: {fileID: 613035537609512815, guid: ea6af7fa8e75f46c2b7deb8dfde2cd40, type: 3}
+  playerPrefab: {fileID: 613035537609512815, guid: 374df005356e741958d221f98c03f723, type: 3}
   turnManager: {fileID: 1059468427}
   murderCardSelect: {fileID: 1059468428}
 --- !u!4 &1059468426
