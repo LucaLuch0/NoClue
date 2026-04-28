@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
@@ -50,33 +51,9 @@ public class StartSceneManager : MonoBehaviour
 
     public void startGame()
     {
-        List<Player> players = new List<Player>();
-
-        List<String> characterNames = new List<String>();
-
-        //PLACEHOLDER FOR CHARACTER NAMES
-        characterNames.Add("1");
-        characterNames.Add("2");
-        characterNames.Add("3");
-        characterNames.Add("4");
-        characterNames.Add("5");
-        characterNames.Add("6");
-
-        players = new List<Player>();
-
-        foreach (String name in getPlayerNames())
-        {
-            int random = Random.Range(0, characterNames.Count);
-            string character = characterNames[random];
-            characterNames.RemoveAt(random);
-
-            GameObject playerObj = new GameObject(name);
-            Player newPlayer = playerObj.AddComponent<Player>();
-            newPlayer.Initialize(name, character);
-            players.Add(newPlayer);
-        }
-
-        PlayerManager.addPlayers(players);
+        PlayerManager.playerNames = getPlayerNames();
+        
+        SceneManager.LoadScene("MainScene");
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -84,6 +61,11 @@ public class StartSceneManager : MonoBehaviour
     {
         playerInputs = new Stack<GameObject>();
         playerCount = 0;
+        addPlayer();
+        addPlayer();
+        addPlayer();
+        addPlayer();
+        addPlayer();
         addPlayer();
 
 
