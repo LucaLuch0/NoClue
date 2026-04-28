@@ -63,11 +63,11 @@ public class GameManager : MonoBehaviour
             player.setPosition(startingSpaces.Pop());
         }
         
+        murderCardSelect.setUp();
         
         Debug.Log("TURN MANAGER CREATED");
         turnManager.activePlayers = (players);
         turnManager.InitializeTurnOrder();
-        murderCardSelect.setUp();
 
     }
 

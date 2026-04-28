@@ -7,15 +7,13 @@
     <list default="true" id="2ddc8264-1ba8-443c-8efd-93fbd6b798a9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.NoClue/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NoClue/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Board/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Board/Scripts/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Cards/MurderCardSelect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Cards/MurderCardSelect.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/InputSystem_Actions.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InputSystem_Actions.inputactions" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Card.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Card.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/CurvedHandLayout.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CurvedHandLayout.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/TurnManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TurnManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Start Scene/InputField (TMP).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Start Scene/InputField (TMP).prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Start Scene/StartScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Start Scene/StartScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TileClickHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TileClickHandler.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,7 +127,7 @@
       <updated>1777292229745</updated>
       <workItem from="1777292232037" duration="1267000" />
       <workItem from="1777293518195" duration="12048000" />
-      <workItem from="1777331922095" duration="7323000" />
+      <workItem from="1777331922095" duration="9176000" />
     </task>
     <servers />
   </component>

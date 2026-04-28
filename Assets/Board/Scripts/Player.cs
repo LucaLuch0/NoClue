@@ -26,7 +26,6 @@ public class Player : MonoBehaviour
         this.playerName = name;
         this.character = character;
 
-        moves = 100;
         Debug.Log("Player Created: Name = " + name + " Character = " + character + "");
     }
 

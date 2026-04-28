@@ -21,8 +21,9 @@ public class CurvedHandLayout : MonoBehaviour
         Debug.Log("Player cards: " + cards.Count);
         foreach (GameObject card in cardObjects)
         {
-            Destroy(card);
+            DestroyImmediate(card);
         }
+        cardObjects.Clear();
 
         for (int i = 0; i < cards.Count; i++)
         {
