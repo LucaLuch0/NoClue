@@ -1,6 +1,8 @@
+using System;
 using UnityEngine;
 using System.Collections.Generic;
 using System.Linq;
+using TMPro;
 
 public class TurnManager : MonoBehaviour
 {
@@ -9,6 +11,13 @@ public class TurnManager : MonoBehaviour
     // VARIABLES
     public List<Player> activePlayers = new List<Player>();
     private int currentPlayerIndex = 0;
+    public TextMeshProUGUI playerNameText;
+    public CurvedHandLayout curvedHandLayout;
+
+    public Player currentPlayer()
+    {
+        return activePlayers[currentPlayerIndex];
+    }
 
     // OFFICIAL CLUEDO TURN ORDER
     private readonly List<string> officialTurnOrder = new List<string>
@@ -42,8 +51,11 @@ public class TurnManager : MonoBehaviour
     public void StartTurn()
     {
         Player currentPlayer = activePlayers[currentPlayerIndex];
+        currentPlayer.setMoves();
+        playerNameText.text = currentPlayer.getName() + " : " + currentPlayer.getCharacter();
+        curvedHandLayout.setup(currentPlayer.hand);
         Debug.Log("--- TURN STARTED: " + currentPlayer.getName() + " playing as " + currentPlayer.getCharacter() + " ---");
-        DetectiveNotesManager.Instance.LoadPlayerNotes(currentPlayer);
+        //DetectiveNotesManager.Instance.LoadPlayerNotes(currentPlayer);
     }
 
     public void EndCurrentTurn()

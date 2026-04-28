@@ -10,6 +10,10 @@ public class GameManager : MonoBehaviour
     
     public GameObject playerPrefab;
     
+    public TurnManager turnManager;
+
+    public MurderCardSelect murderCardSelect;
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -19,12 +23,13 @@ public class GameManager : MonoBehaviour
     {
         List<Player> players = new List<Player>();
         List<String> characterNames = new List<String>();
-        characterNames.Add("1");
-        characterNames.Add("2");
-        characterNames.Add("3");
-        characterNames.Add("4");
-        characterNames.Add("5");   //// PLACEHOLDER
-        characterNames.Add("6");
+        
+        characterNames.Add("Miss Scarlett");
+        characterNames.Add("Colonel Mustard");
+        characterNames.Add("Mrs. White");
+        characterNames.Add("Mr. Green");
+        characterNames.Add("Mrs. Peacock");   //// PLACEHOLDER
+        characterNames.Add("Professor Plum");
 
         foreach (String name in PlayerManager.playerNames)
         {
@@ -57,6 +62,13 @@ public class GameManager : MonoBehaviour
         {
             player.setPosition(startingSpaces.Pop());
         }
+        
+        
+        Debug.Log("TURN MANAGER CREATED");
+        turnManager.activePlayers = (players);
+        turnManager.InitializeTurnOrder();
+        murderCardSelect.setUp();
+
     }
 
     // Update is called once per frame

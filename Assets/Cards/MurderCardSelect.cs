@@ -15,8 +15,9 @@ public class MurderCardSelect : MonoBehaviour
     public Card murderRoom;
     public Card murderSuspect;
     public Card murderWeapon;
-    void Start()
+    public void setUp()
     {
+        Debug.Log("PLAYER CARDS: SET UP STARTED");
         DrawMurderCards();
         DealRemainingCards();
     }
@@ -57,20 +58,11 @@ public class MurderCardSelect : MonoBehaviour
 
     public void DealRemainingCards()
     {
-        if (TurnManager.Instance != null && TurnManager.Instance.activePlayers.Count > 0)
-        {
-            players = TurnManager.Instance.activePlayers;
-        }
-
-        if (players == null || players.Count == 0)
-        {
-            Debug.LogWarning("No players found to deal to");
-            return;
-        }
+        this.players = PlayerManager.getPlayers();
 
         allCardsDeck = allCardsDeck.OrderBy(card => Random.value).ToList();
         int currentPlayerIndex = 0;
-
+        
         foreach (Card card in allCardsDeck)
         {
             players[currentPlayerIndex].hand.Add(card);

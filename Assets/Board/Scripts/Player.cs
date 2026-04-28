@@ -1,5 +1,7 @@
+using System;
 using UnityEngine;
 using System.Collections.Generic;
+using Random = UnityEngine.Random;
 
 public class Player : MonoBehaviour
 {
@@ -13,6 +15,10 @@ public class Player : MonoBehaviour
 
     private float adjustment = 0.5f;
     public int moves;
+    public void setMoves()
+    {
+        moves = Random.Range(1, 13);
+    }
     
     // CONSTRUCTOR
     public void Initialize(string name, string character)
@@ -37,9 +43,6 @@ public class Player : MonoBehaviour
 
     public void movePlayer(BoardSpace tile)
     {
-        
-        
-        
         if (moves <= 0)
         {
             return;
@@ -83,6 +86,7 @@ public class Player : MonoBehaviour
                 {
                     roomSpace.room.addPlayer(this, adjustment);
                     position = roomSpace;
+                    moves = 0;
                     Debug.Log("Is Door");
                     break;
                 }

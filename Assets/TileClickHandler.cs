@@ -7,6 +7,7 @@ public class TileClickHandler : MonoBehaviour
 
     public Tilemap tilemap;
     public MapGenerator mapGenerator;
+    public TurnManager turnManager;
 
     public InputActionReference clickAction;
     public InputActionReference pointAction;
@@ -44,7 +45,7 @@ public class TileClickHandler : MonoBehaviour
         // GET CURRENT PLAYERS TURN
         // CHECK MOVE IS VALID
         
-        PlayerManager.getPlayers()[0].movePlayer(mapGenerator.getBoardSpace(pos));
+        turnManager.currentPlayer().movePlayer(mapGenerator.getBoardSpace(pos));
         
     }
     
