@@ -6,7 +6,6 @@ public class DetectiveNotesManager : MonoBehaviour
     public TMP_Dropdown suspectDropdown;
     public TMP_Dropdown weaponDropdown;
     public TMP_Dropdown roomDropdown;
-
     public TMP_Text notesOutputText;
 
     public void MarkRuledOut()
@@ -20,5 +19,10 @@ public class DetectiveNotesManager : MonoBehaviour
             "Suspect: " + suspect + "\n" +
             "Weapon: " + weapon + "\n" +
             "Room: " + room;
+    }
+
+    public void LogRevealedCard(string cardName)
+    {
+        notesOutputText.text += "\nRevealed: " + cardName;
     }
 }
