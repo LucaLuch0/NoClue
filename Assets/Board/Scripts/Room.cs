@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using Random = UnityEngine.Random;
@@ -38,6 +39,11 @@ public class Room
         positions = new Dictionary<RoomSpace, Player>();
     }
 
+    public RoomSpace getPlayerPosition(Player p)
+    {
+        return positions.FirstOrDefault(x => x.Value == p).Key;
+
+    }
     public void addRoomTile(RoomSpace roomSpace)
     {
         roomTiles.Add(roomSpace);

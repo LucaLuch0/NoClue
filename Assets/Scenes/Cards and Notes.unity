@@ -8949,6 +8949,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1230204754}
   - component: {fileID: 1230204755}
+  - component: {fileID: 1230204756}
   m_Layer: 5
   m_Name: CardManager
   m_TagString: Untagged
@@ -9009,15 +9010,45 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b46599738e9876d469cd4115fcebe732, type: 2}
   - {fileID: 11400000, guid: f0f9123ee6da8c14daf4e184a7919596, type: 2}
   players:
-  - playerName: Bob
-    hand: []
-  - playerName: Bob 2
-    hand: []
-  - playerName: Bob 3
-    hand: []
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   murderRoom: {fileID: 0}
   murderSuspect: {fileID: 0}
   murderWeapon: {fileID: 0}
+--- !u!114 &1230204756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1230204753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f0c3e61ae3444d529137998e92d3f4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  suggestionPanel: {fileID: 314548244}
+  accusationPanel: {fileID: 641064001}
+  cardRevealPanel: {fileID: 80856294}
+  resultPanel: {fileID: 1028526193}
+  suspectDropdown: {fileID: 1452215509}
+  weaponDropdown: {fileID: 524182502}
+  accuseSuspectDropdown: {fileID: 1421563408}
+  accuseWeaponDropdown: {fileID: 284183527}
+  accuseRoomDropdown: {fileID: 1823598734}
+  roomLabel: {fileID: 1876892881}
+  revealInstructionText: {fileID: 1004992297}
+  resultText: {fileID: 1812041566}
+  suggestButton: {fileID: 1829455909}
+  cancelButton: {fileID: 685127155}
+  confirmAccuseButton: {fileID: 1320698107}
+  cancelAccuseButton: {fileID: 938004392}
+  cardButton1: {fileID: 261498352}
+  cardButton2: {fileID: 1512875155}
+  cardButton3: {fileID: 451480701}
+  noCardButton: {fileID: 380796128}
+  notesManager: {fileID: 1180156127}
 --- !u!1 &1239149605
 GameObject:
   m_ObjectHideFlags: 0

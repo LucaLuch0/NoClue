@@ -44,5 +44,8 @@ TagManager:
   - name: Player
     uniqueID: 2369355267
     locked: 0
+  - name: Switch Player UI
+    uniqueID: 693185397
+    locked: 0
   m_RenderingLayers:
   - Default

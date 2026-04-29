@@ -28,6 +28,10 @@ public class MurderCardSelect : MonoBehaviour
         List<Card> suspectCards = allCardsDeck.Where(c => c.cardType == Card.CardType.Suspect).ToList();
         List<Card> weaponCards = allCardsDeck.Where(c => c.cardType == Card.CardType.Weapon).ToList();
 
+        CardManager.rooms = roomCards;
+        CardManager.characters = suspectCards;
+        CardManager.weapons = weaponCards;
+
         if (roomCards.Count > 0)
         {
             murderRoom = roomCards[Random.Range(0, roomCards.Count)];

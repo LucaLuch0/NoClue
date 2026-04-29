@@ -33,6 +33,8 @@ public class MapGenerator : MonoBehaviour
     public TileBase hallwayDoorLeft;
     public TileBase hallwayDoorRight;
 
+    public TileBase shortcut;
+
     [Header("Room Door Tiles")]
     public TileBase roomDoorTop;
     public TileBase roomDoorBottom;
@@ -53,9 +55,18 @@ public class MapGenerator : MonoBehaviour
     public List<HallwaySpace> hallwaySpaces = new List<HallwaySpace>();
     public List<DoorSpace> doorSpaces = new List<DoorSpace>();
     public List<ExitSpace> exitSpaces = new List<ExitSpace>();
+    public List<ShortcutSpace> shortcutSpaces = new List<ShortcutSpace>();
 
     public BoardSpace getBoardSpace(Vector2Int cellPos)
     {
+        foreach (ShortcutSpace shortcutSpace in shortcutSpaces)
+        {
+            if (shortcutSpace.pos == cellPos)
+            {
+                return shortcutSpace;
+            }
+        }
+        
         foreach (RoomSpace roomSpace in roomSpaces)
         {
             if (roomSpace.pos == cellPos)
@@ -74,6 +85,8 @@ public class MapGenerator : MonoBehaviour
 
         return null;
     }
+    
+    
     
     public GameManager gameManager;
 
@@ -116,6 +129,8 @@ public class MapGenerator : MonoBehaviour
         rooms.Add(new Room("LOUNGE"));
         rooms.Add(new Room("HALL"));
         rooms.Add(new Room("STUDY"));
+        
+        
         
         
         // Starting Locations
@@ -196,18 +211,42 @@ public class MapGenerator : MonoBehaviour
         
         GenerateCluedoBoard();
         LabelRooms();
+        GenerateShortcuts();
         
         gameManager.setup();
     }
 
-    // CAN BE DELETED
-    void DebugRooms()
+    public bool isShortcutSpace(BoardSpace boardSpace)
     {
-        foreach (Room room in rooms)
+        foreach (ShortcutSpace shortcutSpace in shortcutSpaces)
         {
-            room.debug();
+            if (boardSpace.pos == shortcutSpace.pos)
+            {
+                return true;
+            }
         }
+
+        return false;
     }
+
+    void GenerateShortcuts()
+    {
+        Vector2Int shortcut1point1 = new Vector2Int(0, 0);
+        Vector2Int shortcut1point2 = new Vector2Int(23, 24);
+        Vector2Int shortcut2point1 = new Vector2Int(23, 0);
+        Vector2Int shortcut2point2 = new Vector2Int(0, 24);
+        
+        shortcutSpaces.Add(new ShortcutSpace(shortcut1point1, visualTilemap.CellToWorld((Vector3Int) shortcut1point1), GetRoom("LOUNGE"), shortcut1point2));
+        shortcutSpaces.Add(new ShortcutSpace(shortcut1point2, visualTilemap.CellToWorld((Vector3Int) shortcut1point2), GetRoom("CONSERVATORY"), shortcut1point1));
+        shortcutSpaces.Add(new ShortcutSpace(shortcut2point1, visualTilemap.CellToWorld((Vector3Int) shortcut2point1), GetRoom("STUDY"), shortcut2point2));
+        shortcutSpaces.Add(new ShortcutSpace(shortcut2point2, visualTilemap.CellToWorld((Vector3Int) shortcut2point2), GetRoom("KITCHEN"), shortcut2point1));
+
+        visualTilemap.SetTile((Vector3Int)shortcut1point1, shortcut);
+        visualTilemap.SetTile((Vector3Int)shortcut1point2, shortcut);
+        visualTilemap.SetTile((Vector3Int)shortcut2point1, shortcut);
+        visualTilemap.SetTile((Vector3Int)shortcut2point2, shortcut);
+    }
+    
 
     void GenerateCluedoBoard()
     {
@@ -292,7 +331,6 @@ public class MapGenerator : MonoBehaviour
             if (room == null) { return; }
             RoomSpace roomSpace = (new RoomSpace(pos, worldPos, room, true));
             roomSpaces.Add(roomSpace);
-            room.addRoomTile(roomSpace);
             
         }
         else
@@ -317,7 +355,13 @@ public class MapGenerator : MonoBehaviour
             if (room == null) { return; }
             RoomSpace roomSpace = (new RoomSpace(pos, worldPos, room, false));
             roomSpaces.Add(roomSpace);
-            room.addRoomTile(roomSpace);
+            
+            // Checks if its a shortcut space. If not it adds to the room
+            // This is to avoid players being placed in the same tile as a shortcut
+            if (!isShortcutSpace(roomSpace))
+            {
+                room.addRoomTile(roomSpace);
+            }
         }
         
         visualTilemap.SetTile((Vector3Int)pos, selectedTile);
@@ -433,6 +477,19 @@ public class ExitSpace : BoardSpace
         this.pos = pos;
         this.worldPos = worldPos;
         this.room = room;
+    }
+}
+
+public class ShortcutSpace : BoardSpace
+{
+    public Room room;
+    public Vector2Int oppositeSpace;
+    public ShortcutSpace(Vector2Int pos, Vector2 worldPos, Room room, Vector2Int oppositeSpace) : base(pos, worldPos)
+    {
+        this.pos = pos;
+        this.worldPos = worldPos;
+        this.room = room;
+        this.oppositeSpace = oppositeSpace;
     }
 }
 

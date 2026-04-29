@@ -11,6 +11,9 @@ public static class PlayerManager
     public static List<String> playerNames = new List<String>();
     private static List<Player> players = new List<Player>();
     public static GameObject playerPrefab;
+    public static SuggestionUIManager suggestionUIManager;
+    public static Suggestion suggestion;
+
 
     public static void addPlayers(List<Player> newPlayers)
     {

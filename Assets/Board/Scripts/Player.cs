@@ -13,6 +13,8 @@ public class Player : MonoBehaviour
     [HideInInspector] public string personalNotesLog = "My Ruled Out Notes:\n";
     public GameObject gameObject;
 
+    public bool guessed;
+    
     private float adjustment = 0.5f;
     public int moves;
     public void setMoves()
@@ -25,6 +27,7 @@ public class Player : MonoBehaviour
     {
         this.playerName = name;
         this.character = character;
+        guessed = false;
 
         Debug.Log("Player Created: Name = " + name + " Character = " + character + "");
     }
@@ -50,6 +53,27 @@ public class Player : MonoBehaviour
         // checks if player is in room and allows move if it is a valid exit to a room
         if (position is RoomSpace)
         {
+            foreach (ShortcutSpace shortcutSpace in PlayerManager.mapGenerator.shortcutSpaces)
+            {
+                if (tile.pos == shortcutSpace.pos)
+                {
+                    Debug.Log("Shortcut room " + shortcutSpace.room.name + "Position room" + ((RoomSpace) position).room.name);
+                    if (shortcutSpace.room.Equals(((RoomSpace)position).room))
+                    {
+                        Debug.Log("SHORTCUT STARTED");
+                        Room newRoom =
+                            ((ShortcutSpace)PlayerManager.mapGenerator.getBoardSpace(shortcutSpace.oppositeSpace)).room;
+                        ((RoomSpace)position).room.removePlayer(this);
+                        newRoom.addPlayer(this, adjustment);
+                        position = newRoom.getPlayerPosition(this);
+                        moves = 0;
+                        Debug.Log("Is Door");
+                        //PlayerManager.suggestionUIManager.OpenSuggestion(this, roomSpace.room.getName());
+                        PlayerManager.suggestion.uiSetup(this, newRoom);
+                        return;
+                    }
+                }
+            }
             foreach (ExitSpace exitSpace in PlayerManager.mapGenerator.exitSpaces)
             {
                 if (exitSpace.room.Equals(((RoomSpace) position).room))
@@ -84,10 +108,12 @@ public class Player : MonoBehaviour
                 if (roomSpace.pos == tile.pos)
                 {
                     roomSpace.room.addPlayer(this, adjustment);
-                    position = roomSpace;
+                    position = roomSpace.room.getPlayerPosition(this);;
                     moves = 0;
                     Debug.Log("Is Door");
-                    break;
+                    //PlayerManager.suggestionUIManager.OpenSuggestion(this, roomSpace.room.getName());
+                    PlayerManager.suggestion.uiSetup(this, roomSpace.room);
+                    return;
                 }
             }
         }

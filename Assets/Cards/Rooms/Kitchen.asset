@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 553807e054caee649b0c777a61f762d3, type: 3}
   m_Name: Kitchen
   m_EditorClassIdentifier: 
-  cardName: Kitchen
+  cardName: KITCHEN
   cardType: 2
