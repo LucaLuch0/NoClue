@@ -6,93 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="2ddc8264-1ba8-443c-8efd-93fbd6b798a9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.NoClue/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NoClue/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Board/Prefabs/CluedoBoard.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Board/Prefabs/CluedoBoard.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Board/Scripts/MapGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Board/Scripts/MapGenerator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Board/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Board/Scripts/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Board/Scripts/Room.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Board/Scripts/Room.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Board/Sprites/HallwayTile.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Board/Sprites/HallwayTile.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Board/Sprites/RoomTIle.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Board/Sprites/RoomTIle.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Board/Sprites/hallwaybottom.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Board/Sprites/hallwaybottom.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Board/Sprites/hallwayleft.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Board/Sprites/hallwayleft.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Board/Sprites/hallwayright.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Board/Sprites/hallwayright.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Board/Sprites/hallwaytop.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Board/Sprites/hallwaytop.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Board/Sprites/room_bottomleftcorner.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Board/Sprites/room_bottomleftcorner.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Board/Sprites/room_bottomrightcorner.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Board/Sprites/room_bottomrightcorner.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Board/Sprites/room_bottomwall.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Board/Sprites/room_bottomwall.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Board/Sprites/room_centre.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Board/Sprites/room_centre.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Board/Sprites/room_leftwall.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Board/Sprites/room_leftwall.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Board/Sprites/room_rightwall.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Board/Sprites/room_rightwall.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Board/Sprites/room_topleftcorner.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Board/Sprites/room_topleftcorner.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Board/Sprites/room_toprightcorner.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Board/Sprites/room_toprightcorner.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Board/Sprites/room_topwall.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Board/Sprites/room_topwall.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Board/Sprites/roombottom.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Board/Sprites/roombottom.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Board/Sprites/roomleft.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Board/Sprites/roomleft.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Board/Sprites/roomright.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Board/Sprites/roomright.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Board/Sprites/roomtop.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Board/Sprites/roomtop.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Cards/MurderCardSelect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Cards/MurderCardSelect.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Cards/Rooms/Bathroom.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Cards/Rooms/Bathroom.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Cards/Rooms/Bedroom.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Cards/Rooms/Bedroom.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Cards/Rooms/Courtyard.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Cards/Rooms/Courtyard.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Cards/Rooms/Dining Room.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Cards/Rooms/Dining Room.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Cards/Rooms/Game Room.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Cards/Rooms/Game Room.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Cards/Rooms/Garage.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Cards/Rooms/Garage.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Cards/Rooms/Kitchen.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Cards/Rooms/Kitchen.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Cards/Rooms/Living Room.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Cards/Rooms/Living Room.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Cards/Rooms/Study.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Cards/Rooms/Study.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/HallwayTile.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/HallwayTile.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/PlayerManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PlayerManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RoomTIle.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RoomTIle.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes 2.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes 2/CardHandScene.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes 2/CardHandScene.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Cards and Notes.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Cards and Notes.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SuggestionUIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SuggestionUIManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/hallwaybottom.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/hallwaybottom.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/hallwayleft.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/hallwayleft.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/hallwayright.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/hallwayright.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/hallwaytop.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/hallwaytop.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/room_bottomleftcorner.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/room_bottomleftcorner.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/room_bottomrightcorner.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/room_bottomrightcorner.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/room_bottomwall.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/room_bottomwall.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/room_centre.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/room_centre.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/room_leftwall.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/room_leftwall.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/room_rightwall.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/room_rightwall.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/room_topleftcorner.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/room_topleftcorner.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/room_toprightcorner.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/room_toprightcorner.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/room_topwall.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/room_topwall.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/roombottom.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/roombottom.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/roomleft.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/roomleft.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/roomright.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/roomright.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/roomtop.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/roomtop.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TurnManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TurnManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Start Scene/StartSceneManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Start Scene/StartSceneManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -219,7 +136,7 @@
       <workItem from="1777292232037" duration="1267000" />
       <workItem from="1777293518195" duration="12048000" />
       <workItem from="1777331922095" duration="9176000" />
-      <workItem from="1777484443461" duration="9425000" />
+      <workItem from="1777484443461" duration="11765000" />
     </task>
     <servers />
   </component>

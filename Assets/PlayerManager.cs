@@ -9,6 +9,8 @@ public static class PlayerManager
 {
     public static MapGenerator mapGenerator;
     public static List<String> playerNames = new List<String>();
+    public static List<Color> playerColours = new List<Color>();
+
     private static List<Player> players = new List<Player>();
     public static GameObject playerPrefab;
     public static SuggestionUIManager suggestionUIManager;

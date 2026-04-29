@@ -45,6 +45,16 @@ public class GameManager : MonoBehaviour
             players.Add(newPlayer);
             newPlayer.gameObject = playerObject;
         }
+        
+        Debug.Log(PlayerManager.playerColours.Count + " coloursss");
+
+        int count = 0;
+        foreach (Color color in PlayerManager.playerColours)
+        {
+            players[count].GetComponent<SpriteRenderer>().color = color;
+            count++;
+        }
+        
 
         PlayerManager.addPlayers(players);
         

@@ -58,7 +58,6 @@ public class TurnManager : MonoBehaviour
     {
         Player currentPlayer = activePlayers[currentPlayerIndex];
         currentPlayer.setMoves();
-        currentPlayer.GetComponent<SpriteRenderer>().color = Color.blue;
         playerNameText.text = currentPlayer.getName() + " : " + currentPlayer.getCharacter();
         curvedHandLayout.setup(currentPlayer.hand);
         Debug.Log("--- TURN STARTED: " + currentPlayer.getName() + " playing as " + currentPlayer.getCharacter() + " ---");
@@ -67,7 +66,6 @@ public class TurnManager : MonoBehaviour
 
     public void EndCurrentTurn()
     {
-        currentPlayer().GetComponent<SpriteRenderer>().color = Color.white;
         currentPlayerIndex++;
         if (currentPlayerIndex >= activePlayers.Count)
         {
