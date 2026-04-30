@@ -7,4 +7,17 @@ public static class CardManager
     public static List<Card> characters = new List<Card>();
     public static List<Card> rooms = new List<Card>();
 
+    public static List<Card> getWeapons()
+    {
+        return weapons;
+    }
+    public static List<Card> getCharacters()
+    {
+        return characters;
+    }
+    public static List<Card> getRooms()
+    {
+        return rooms;
+    }
+
 }

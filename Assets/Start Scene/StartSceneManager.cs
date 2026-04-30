@@ -29,13 +29,14 @@ public class StartSceneManager : MonoBehaviour
         GameObject newPlayerInput = Instantiate(inputPrefab, inputGrid.transform);
         newPlayerInput.name = "Player " + (playerCount + 1) + "'s Name...";
         playerInputs.Push(newPlayerInput);
+        addColourOption(playerCount);
         playerCount++;
-        addColourOption();
     }
     
-    public void addColourOption()
+    public void addColourOption(int value)
     {
         GameObject newColourInput = Instantiate(colourPrefab, colourGrid.transform);
+        newColourInput.GetComponent<TMP_Dropdown>().value = value;
         playerColours.Push(newColourInput);
     }
 
@@ -53,9 +54,16 @@ public class StartSceneManager : MonoBehaviour
         List<String> playerNames = new List<String>();
 
         Debug.Log("Player Count: " + playerInputs.Count);
+        int count = 0;
         foreach (GameObject playerInput in playerInputs)
         {
-            playerNames.Add(playerInput.GetComponent<TMP_InputField>().text);
+            String name = playerInput.GetComponent<TMP_InputField>().text;
+            if(name == "")
+            {
+                name = "Player " + count;
+            }
+            playerNames.Add(name);
+            count++;
         }
 
         return playerNames;

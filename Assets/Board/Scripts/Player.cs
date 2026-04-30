@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
 
     public List<Card> hand = new List<Card>();
     [HideInInspector] public string personalNotesLog = "My Ruled Out Notes:\n";
+    public Dictionary<Card, bool> notes = new Dictionary<Card, bool>();
     public GameObject gameObject;
 
     public bool guessed;
@@ -29,7 +30,31 @@ public class Player : MonoBehaviour
         this.character = character;
         guessed = false;
 
-        Debug.Log("Player Created: Name = " + name + " Character = " + character + "");
+        
+        
+    }
+
+    public void setupNotes()
+    {
+        foreach (Card c in CardManager.getCharacters())
+        {
+            notes.Add(c, false);
+        }
+        foreach (Card c in CardManager.getRooms())
+        {
+            notes.Add(c, false);
+        }
+        foreach (Card c in CardManager.getWeapons())
+        {
+            notes.Add(c, false);
+        }
+
+        foreach (Card c in hand)
+        {
+            notes[c] = true;
+        }
+        
+        Debug.Log("NOTES LENGTH" + notes.Count);
     }
 
     // the tile the player is assigned to (the parent gameobject)

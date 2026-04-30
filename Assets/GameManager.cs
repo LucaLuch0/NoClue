@@ -13,7 +13,8 @@ public class GameManager : MonoBehaviour
     public TurnManager turnManager;
 
     public MurderCardSelect murderCardSelect;
-    
+
+    public PlayerInformation playerInformation;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -68,17 +69,19 @@ public class GameManager : MonoBehaviour
             startingSpaces.Push(startingSpace);
         }
         
+        murderCardSelect.setUp();
+        
         foreach(Player player in PlayerManager.getPlayers())
         {
             player.setPosition(startingSpaces.Pop());
+            player.setupNotes();
         }
-        
-        murderCardSelect.setUp();
         
         Debug.Log("TURN MANAGER CREATED");
         turnManager.activePlayers = (players);
         turnManager.InitializeTurnOrder();
-
+        
+        playerInformation.setUp();
     }
 
     // Update is called once per frame

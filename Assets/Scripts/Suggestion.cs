@@ -46,6 +46,8 @@ public class Suggestion : MonoBehaviour
 
     public void cardSelected(Card c)
     {
+        player.notes[c] = true;
+        turnManager.resetNotes();
         displayCardUI = Instantiate(displayCardUIPrefab, transform);
         displayCardUI.GetComponent<DisplayTextUI>().setUp(c.cardName);
     }
