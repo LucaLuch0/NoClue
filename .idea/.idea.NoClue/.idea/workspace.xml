@@ -6,9 +6,68 @@
   <component name="ChangeListManager">
     <list default="true" id="2ddc8264-1ba8-443c-8efd-93fbd6b798a9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.NoClue/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NoClue/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Accusation.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Accusation.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Notes.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Notes.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AccusationUI.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AccusationUI.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Board/Scripts/MapGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Board/Scripts/MapGenerator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Board/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Board/Scripts/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Board/Scripts/Room.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Board/Scripts/Room.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CameraMovement.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CameraMovement.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Cards/MurderCardSelect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Cards/MurderCardSelect.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CluedoBoard.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CluedoBoard.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DetectiveNotes.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DetectiveNotes.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DetectiveNotesManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DetectiveNotesManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DisplayCardUI.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DisplayCardUI.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ExitGame.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ExitGame.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NoCardsUI.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NoCardsUI.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PassBackPlayerUI.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PassBackPlayerUI.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PassToAnotherPlayerUI.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PassToAnotherPlayerUI.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PickCardUI.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PickCardUI.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlayerInformation.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlayerInformation.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlayerManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlayerManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/CardHandScene.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/CardHandScene.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Cards and Notes.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Cards and Notes.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Accusation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Accusation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CurvedHandLayout.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CurvedHandLayout.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/IntermissionUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/IntermissionUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Suggestion.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Suggestion.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SuggestionUIManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SuggestionUIManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TurnManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TurnManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Start Scene/Colour Options.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Start Scene/Colour Options.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Start Scene/InputField (TMP).prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Start Scene/InputField (TMP).prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Start Scene/StartScene.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Start Scene/StartScene.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Start Scene/StartSceneManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Start Scene/StartSceneManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SuggestionUI.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SuggestionUI.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TileClickHandler.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TileClickHandler.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/background.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/background.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,9 +101,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/SuggestionUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/TileClickHandler.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
-  <component name="LLMProjectSettings">
-    <option name="turned_on" value="false" />
-  </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 8
@@ -54,22 +111,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.inline.completion&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "ml.llm.LLMThirdPartyAiProvidersConfigurable",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="$USER_HOME$/Desktop/NoClueBuild/NoClue.app/Contents/MacOS/My project" />
@@ -149,13 +206,15 @@
       <workItem from="1777292232037" duration="1267000" />
       <workItem from="1777293518195" duration="12048000" />
       <workItem from="1777331922095" duration="9176000" />
-      <workItem from="1777484443461" duration="20647000" />
+      <workItem from="1777484443461" duration="21361000" />
+      <workItem from="1777547608002" duration="5420000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityProjectDiscoverer">
     <option name="hasUnityReference" value="true" />
@@ -183,5 +242,9 @@
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

@@ -6,6 +6,10 @@ using UnityEngine;
 using UnityEngine.Tilemaps;
 using Random = UnityEngine.Random;
 
+/// <summary>
+/// Represents a named room on the Cluedo board.
+/// Manages the room's tiles, player occupancy, and position assignments.
+/// </summary>
 public class Room
 {
 
