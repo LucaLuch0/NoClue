@@ -34,7 +34,7 @@ public class Accusation : MonoBehaviour
         else
         {
             GameObject messageUI = Instantiate(messageUIPrefab, transform);
-            messageUI.GetComponent<DisplayTextUI>().setUp("Wrong Accusation.");
+            messageUI.GetComponent<DisplayTextUI>().setUp("Wrong Accusation. You can no longer accuse anyone!");
             turnManager.currentPlayer().guessed = true;
         }
     }

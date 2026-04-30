@@ -815,7 +815,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Suggest
+  m_text: Accuse
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9b226b1f82af94ff2b2232ffb338f569, type: 2}
   m_sharedMaterial: {fileID: 4577087494476646486, guid: 9b226b1f82af94ff2b2232ffb338f569, type: 2}
